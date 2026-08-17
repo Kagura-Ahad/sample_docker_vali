@@ -1,0 +1,29 @@
+{
+  "name": "VALI GPU Dev",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "runArgs": [
+    "--gpus=all",
+    "--net=host",
+    "--pid=host"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-python.vscode-python-envs",
+        "mechatroner.rainbow-csv"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/envs/vali_env/bin/python",
+        "python.analysis.typeCheckingMode": "off"
+      }
+    }
+  }
+}

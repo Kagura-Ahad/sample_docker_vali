@@ -1,0 +1,3 @@
+opencv-python-headless
+ultralytics
+python_vali
