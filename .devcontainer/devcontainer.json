@@ -10,6 +10,9 @@
   ],
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=/,target=/host,type=bind,readonly"
+  ],
   "remoteUser": "root",
   "customizations": {
     "vscode": {
@@ -22,7 +25,10 @@
       ],
       "settings": {
         "python.defaultInterpreterPath": "/opt/conda/envs/vali_env/bin/python",
-        "python.analysis.typeCheckingMode": "off"
+        "python.analysis.typeCheckingMode": "off",
+        "files.watcherExclude": { "/host/**": true },
+        "search.exclude": { "/host/**": true },
+        "python.analysis.exclude": [ "/host/**" ]
       }
     }
   }
