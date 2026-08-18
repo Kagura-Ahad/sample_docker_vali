@@ -21,7 +21,8 @@
         "ms-python.vscode-pylance",
         "ms-python.debugpy",
         "ms-python.vscode-python-envs",
-        "mechatroner.rainbow-csv"
+        "mechatroner.rainbow-csv",
+        "anthropic.claude-code"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/opt/conda/envs/vali_env/bin/python",
